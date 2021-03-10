@@ -9,17 +9,15 @@ import android.widget.TextView;
 
 import unipiloto.edu.co.vacunas.R;
 
-public  class Registro_Activity extends Activity {
+public  class RegistroActivity extends Activity {
 
     public static String mensaje = "hola";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_prueba);
+        setContentView(R.layout.activity_registro);
         Intent intent = getIntent();
-        String prueba = intent.getStringExtra(mensaje);
-        TextView test = findViewById(R.id.mensaje);
-        test.setText(prueba);
+
     }
 }

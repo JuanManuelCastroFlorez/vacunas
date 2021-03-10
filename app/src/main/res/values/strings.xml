@@ -9,4 +9,22 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+    <string name="etiu">"Tipo de usuarios"</string>
+    <string name="etip">"Profesión"</string>
+
+    <!--<String registro -->
+    <string-array name="usuario">
+        <item>Usuario</item>
+        <item>Salud</item>
+        <item>Representante</item>
+        <item>Receptor</item>
+    </string-array>
+    <!--<String profesion -->
+    <string-array name="profesion">
+        <item>Medico</item>
+        <item>Docente</item>
+        <item>Militar o policia</item>
+        <item>Estudiante</item>
+        <item>Otro</item>
+    </string-array>
 </resources>

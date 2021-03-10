@@ -24,7 +24,6 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         intiComponents();
-        setup();
     }
 
     public void  intiComponents(){
@@ -34,20 +33,8 @@ public class LoginActivity extends AppCompatActivity {
         password = findViewById(R.id.Password);
     }
 
-    public void setup(){
-        registrar.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                System.out.println(email.getText());
-                System.out.println(password.getText());
-                enviar(v, email.getText().toString());
-            }
-        });
-    }
-
-    public void enviar(View v, String mensaje){
-        Intent intent = new Intent(this, Registro_Activity.class);
-        intent.putExtra(Registro_Activity.mensaje,mensaje);
+    public void enviar(View view) {
+        Intent intent = new Intent(this, RegistroActivity.class);
         startActivity(intent);
     }
 }
