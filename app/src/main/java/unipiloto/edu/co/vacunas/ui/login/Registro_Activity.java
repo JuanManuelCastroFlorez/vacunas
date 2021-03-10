@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import unipiloto.edu.co.vacunas.R;
 
-public  class Prueba extends Activity {
+public  class Registro_Activity extends Activity {
 
     public static String mensaje = "hola";
 

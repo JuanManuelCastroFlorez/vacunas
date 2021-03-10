@@ -46,8 +46,8 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void enviar(View v, String mensaje){
-        Intent intent = new Intent(this, Prueba.class);
-        intent.putExtra(Prueba.mensaje,mensaje);
+        Intent intent = new Intent(this, Registro_Activity.class);
+        intent.putExtra(Registro_Activity.mensaje,mensaje);
         startActivity(intent);
     }
 }
