@@ -15,16 +15,20 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:gravity="center_horizontal"
         tools:layout_editor_absoluteX="100dp"
         tools:layout_editor_absoluteY="123dp">
+
 
         <TextView
             android:id="@+id/etiquetau"
             android:layout_width="match_parent"
-            android:layout_height="35dp"
+            android:layout_height="38dp"
+            android:background="#03A9F4"
             android:text="@string/etiu"
             android:textAlignment="center"
-            />
+            android:textColor="@color/white"
+            android:textSize="18sp" />
 
         <Spinner
             android:id="@+id/tusuario"
@@ -92,10 +96,12 @@
         <TextView
             android:id="@+id/etiquetap"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="38dp"
+            android:background="#03A9F4"
             android:text="@string/etip"
             android:textAlignment="center"
-            />
+            android:textColor="@color/white"
+            android:textSize="18sp" />
 
         <Spinner
             android:id="@+id/profesion"
@@ -106,11 +112,13 @@
 
         <Button
             android:id="@+id/enviar"
-            android:layout_width="176dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:gravity="center_horizontal"
-            android:text="Enviar" />
+            android:layout_width="119dp"
+            android:layout_height="37dp"
+            android:layout_marginTop="30dp"
+            android:background="#03A9F4"
+            android:gravity="center"
+            android:text="Enviar"
+            android:textColor="@color/white" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -15,39 +15,50 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="100dp"
+        android:gravity="center_horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
         tools:layout_editor_absoluteY="123dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="197dp"
+            android:layout_height="98dp"
+            android:layout_marginTop="30dp"
+            tools:srcCompat="@drawable/sofdes" />
 
         <EditText
             android:id="@+id/email"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="339dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="60dp"
+            android:backgroundTint="@color/material_on_surface_emphasis_high_type"
             android:ems="10"
-            android:gravity="center_vertical"
             android:hint="Email"
             android:inputType="textEmailAddress" />
 
         <EditText
             android:id="@+id/Password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="339dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="8dp"
             android:ems="10"
             android:hint="Password"
             android:inputType="textPassword" />
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="317dp"
-            android:gravity="center|center_vertical"
+            android:layout_width="304dp"
+            android:layout_height="259dp"
+            android:gravity="center"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/registro"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
                 android:layout_weight="1"
-                android:text="Registrar"
-                android:onClick="enviar"/>
+                android:onClick="enviar"
+                android:text="Registrar" />
 
             <Button
                 android:id="@+id/ingresar"
@@ -56,5 +67,15 @@
                 android:layout_weight="1"
                 android:text="Ingresar" />
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/propiedad"
+            android:layout_width="259dp"
+            android:layout_height="66dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:text="By SoftDes"
+            android:textColor="@color/cardview_dark_background" />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
