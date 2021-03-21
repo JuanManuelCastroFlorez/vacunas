@@ -1,11 +1,8 @@
-package unipiloto.edu.co.vacunas.ui.login;
-
-import androidx.appcompat.app.AppCompatActivity;
+package unipiloto.edu.co.vacunas.ui.activities;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.TextView;
 
 import unipiloto.edu.co.vacunas.R;
 

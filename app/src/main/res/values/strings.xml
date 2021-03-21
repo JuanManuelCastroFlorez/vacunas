@@ -14,10 +14,10 @@
 
     <!--<String registro -->
     <string-array name="usuario">
-        <item>Usuario</item>
-        <item>Salud</item>
-        <item>Representante</item>
-        <item>Receptor</item>
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
     </string-array>
     <!--<String profesion -->
     <string-array name="profesion">
