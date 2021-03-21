@@ -48,8 +48,9 @@ public class LoginActivity extends AppCompatActivity {
         password = findViewById(R.id.Password);
     }
 
-    public void enviar(View view) {
-
+    public void registrar(View view) {
+        Intent intent = new Intent(this, RegistroActivity.class);
+        startActivity(intent);
     }
 
     public void comprobar_credenciales(String correo, String contraseña, String tusuario){
