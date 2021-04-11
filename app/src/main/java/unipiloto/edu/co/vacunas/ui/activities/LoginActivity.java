@@ -55,7 +55,7 @@ public class LoginActivity extends AppCompatActivity {
 
     public void comprobar_credenciales(String correo, String contraseña, String tusuario){
         OkHttpClient client = new OkHttpClient();
-        String url = "https://colombiaprocesovacunas.herokuapp.com/s1/?correo="+correo+"&contraseña="+contraseña+"&tusuario="+tusuario;
+        String url = "https://colombiaprocesovacunas.herokuapp.com/login/?correo="+correo+"&contraseña="+contraseña+"&tusuario="+tusuario;
         Request request = new Request.Builder().url(url).build();
         client.newCall(request).enqueue(new Callback() {
             @Override
