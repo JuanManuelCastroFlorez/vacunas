@@ -6,14 +6,14 @@ import android.os.Bundle;
 
 import unipiloto.edu.co.vacunas.R;
 
-public  class RegistroActivity extends Activity {
+public  class UsuarioActivity extends Activity {
 
     public static String mensaje = "hola";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_registro);
+        setContentView(R.layout.activity_usuario);
         Intent intent = getIntent();
 
     }

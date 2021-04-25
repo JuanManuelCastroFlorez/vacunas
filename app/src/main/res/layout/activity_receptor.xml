@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/etiquetau"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:background="#03A9F4"
+            android:text="@string/etiu"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/usuario"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="Receptor"
+            android:textAlignment="gravity"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/id"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:hint="id-identificación"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/nombre"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:hint="Nombres"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/fapellido"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:hint="Primer apellido"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/sapellido"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:hint="Segundo apellido"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/edad"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:hint="Edad"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/correo"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:gravity="center_vertical"
+            android:hint="Email"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/Password"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword" />
+
+        <EditText
+            android:id="@+id/localidad"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:hint="localidad"
+            android:inputType="textPassword" />
+
+        <EditText
+            android:id="@+id/canti_vacunas"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:hint="cantidad de vacunas"
+            android:inputType="textPassword" />
+
+        <TextView
+            android:id="@+id/etiquetap"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginTop="10dp"
+            android:background="#03A9F4"
+            android:text="@string/etip"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/profesion"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:hint="Escribe tu profesión"
+            android:textAlignment="gravity"
+            android:textColor="@color/purple_700"
+            android:textSize="18dp" />
+
+        <Button
+            android:id="@+id/enviar"
+            android:layout_width="119dp"
+            android:layout_height="37dp"
+            android:layout_marginTop="30dp"
+            android:background="#03A9F4"
+            android:gravity="center"
+            android:onClick="registrar"
+            android:text="Enviar"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

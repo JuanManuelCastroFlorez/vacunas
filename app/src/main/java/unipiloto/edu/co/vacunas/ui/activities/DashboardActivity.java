@@ -20,7 +20,8 @@ public class DashboardActivity extends Activity {
 
         Intent intent = getIntent();
         String mensajeRecibir = intent.getStringExtra(EXTRA_MESSAGE);
-        TextView messageView = (TextView)findViewById(R.id.textView);
+        TextView messageView = (TextView) findViewById(R.id.textView);
         messageView.setText(mensajeRecibir);
     }
+
 }

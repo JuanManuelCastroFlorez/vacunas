@@ -5,6 +5,7 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/fondo"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -21,6 +22,7 @@
         android:ems="10"
         android:hint="Email"
         android:inputType="textEmailAddress"
+        android:textColorHint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.472"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,6 +37,7 @@
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
+        android:textColorHint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.483"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,7 +50,7 @@
         android:layout_marginTop="64dp"
         android:layout_marginEnd="32dp"
         android:layout_weight="1"
-        android:onClick="registrar"
+        android:onClick="f_registrar"
         android:text="Registrar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Password" />
@@ -72,7 +75,7 @@
         android:gravity="center"
         android:text="By SoftDes"
         android:textAlignment="center"
-        android:textColor="@color/cardview_dark_background"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -85,7 +88,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/sofdes" />
+        app:srcCompat="@drawable/softdes" />
 
     <Spinner
         android:id="@+id/spinner"
@@ -103,6 +106,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Tipo de rol"
+        android:textColor="@color/black"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />

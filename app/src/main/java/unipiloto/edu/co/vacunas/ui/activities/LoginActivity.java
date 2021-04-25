@@ -1,7 +1,6 @@
 package unipiloto.edu.co.vacunas.ui.activities;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,6 +20,9 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 import unipiloto.edu.co.vacunas.R;
+import unipiloto.edu.co.vacunas.ui.entidades.Receptor;
+import unipiloto.edu.co.vacunas.ui.entidades.Representante;
+import unipiloto.edu.co.vacunas.ui.entidades.Usuario;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -48,9 +50,28 @@ public class LoginActivity extends AppCompatActivity {
         password = findViewById(R.id.Password);
     }
 
-    public void registrar(View view) {
-        Intent intent = new Intent(this, RegistroActivity.class);
-        startActivity(intent);
+
+
+    public void f_registrar(View view) {
+    Intent intent;
+        switch (tusuario.getSelectedItem().toString()){
+            case "A":intent = new Intent(this, MedicoActivity.class);
+                    startActivity(intent);
+                    break;
+            case "B":intent = new Intent(this, ReceptorActivity.class);
+                startActivity(intent);
+                break;
+            case "C":intent = new Intent(this, RepresentanteActivity.class);
+                startActivity(intent);
+                break;
+            case "D":intent = new Intent(this, UsuarioActivity.class);
+                startActivity(intent);
+                break;
+
+
+
+
+        }
     }
 
     public void comprobar_credenciales(String correo, String contraseña, String tusuario){
