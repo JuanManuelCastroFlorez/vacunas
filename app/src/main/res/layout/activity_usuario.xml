@@ -10,7 +10,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context=".ui.activities.LoginActivity">
+    tools:context=".ui.activities.UsuarioActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -97,23 +97,18 @@
             android:hint="Password"
             android:inputType="textPassword" />
 
-        <EditText
+
+        <CheckBox
             android:id="@+id/comorbilidad"
             android:layout_width="350dp"
-            android:layout_height="50dp"
-            android:ems="10"
-            android:hint="Comorbilidad Si ó No"
-            android:inputType="textPassword" />
+            android:layout_height="wrap_content"
+            android:text="Tiene comorbilidades" />
 
-        <EditText
+        <CheckBox
             android:id="@+id/riesgo"
             android:layout_width="350dp"
-            android:layout_height="50dp"
-            android:ems="10"
-            android:hint="Situación de riesgo  Si ó No"
-            android:inputType="textPassword" />
-
-
+            android:layout_height="wrap_content"
+            android:text="Está en situacion de riesgo" />
 
         <TextView
             android:id="@+id/etiquetap"
@@ -131,7 +126,7 @@
             android:layout_width="350dp"
             android:layout_height="50dp"
             android:gravity="center_horizontal|center_vertical"
-            android:text="Escribe tu profesión"
+            android:hint="Escribe tu profesión"
             android:textAlignment="gravity"
             android:textColor="@color/purple_700"
             android:textSize="18dp" />
@@ -144,6 +139,7 @@
             android:background="#03A9F4"
             android:gravity="center"
             android:text="Enviar"
+            android:onClick="registrar"
             android:textColor="@color/white" />
 
     </LinearLayout>

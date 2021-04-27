@@ -5,7 +5,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.IOException;
@@ -26,8 +28,8 @@ public  class UsuarioActivity extends Activity {
     private EditText edad;
     private EditText password;
     private EditText correo;
-    private EditText comorbilidad;
-    private EditText riesgo;
+    private CheckBox comorbilidad;
+    private CheckBox riesgo;
     private EditText profesion;
     private Button enviar;
 
@@ -36,7 +38,7 @@ public  class UsuarioActivity extends Activity {
 
     public void enviarRegistro(String nombres, String primer_apellido, String segundo_apellido, int edad, String docid, String correo, String comorbilidad, String riesgo, String profesion, String tusuario, String contraseña) {
         OkHttpClient client = new OkHttpClient();
-        String url = "https://colombiaprocesovacunas.herokuapp.com/registro/?nombres=" + nombres + "&primer_apellido=" + primer_apellido + "&segundo_apellido=" + segundo_apellido + "&edad=" + edad + "&docid=" + docid + "&correo=" + correo + "&comorbilidad=" + comorbilidad + "&riesgo=" + riesgo + "&profesion=" + profesion +"&tusuario=" + tusuario + "&contraseña=" + contraseña + "";
+        String url = "http://192.168.0.103:3000/registro?nombres=" + nombres + "&primer_apellido=" + primer_apellido + "&segundo_apellido=" + segundo_apellido + "&edad=" + edad + "&docid=" + docid + "&correo=" + correo + "&comorbilidad=" + comorbilidad + "&riesgo=" + riesgo + "&profesion=" + profesion +"&tusuario=" + tusuario + "&contraseña=" + contraseña + "";
         Request request = new Request.Builder().url(url).build();
         client.newCall(request).enqueue(new Callback() {
             @Override
@@ -71,7 +73,7 @@ public  class UsuarioActivity extends Activity {
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_medico);
+        setContentView(R.layout.activity_usuario);
         intiComponents();
     }
 
@@ -84,8 +86,8 @@ public  class UsuarioActivity extends Activity {
         correo = findViewById(R.id.correo);
         comorbilidad = findViewById(R.id.comorbilidad);
         riesgo = findViewById(R.id.riesgo);
-        profesion = findViewById(R.id.profesion);
-        password = findViewById(R.id.Password);
+        profesion = (EditText) findViewById(R.id.profesion);
+        password = findViewById(R.id.password);
         enviar = findViewById(R.id.enviar);
 
     }
@@ -100,8 +102,8 @@ public  class UsuarioActivity extends Activity {
         String fapellido = this.fapellido.getText().toString();
         String sapellido = this.sapellido.getText().toString();
         String correo = this.correo.getText().toString();
-        String comorbilidad = this.comorbilidad.getText().toString();
-        String riesgo = this.riesgo.getText().toString();
+        String comorbilidad = (this.comorbilidad.isChecked())?true+"":false+"";
+        String riesgo = (this.riesgo.isChecked())?true+"":false+"";
         String profesion = this.profesion.getText().toString();
         int edad = Integer.parseInt(this.edad.getText().toString());
         String password = this.password.getText().toString();
