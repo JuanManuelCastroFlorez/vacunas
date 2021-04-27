@@ -11,8 +11,8 @@ public class Representante extends Usuario {
         this.puesto_asig = puesto_asig;
     }
 
-      public Representante(String nombres, String primer_apellido, String segundo_apellido, String doc_identidad, String correo, String profesion, String edad, String puesto_asig) {
-        super(nombres, primer_apellido, segundo_apellido, doc_identidad, correo, profesion, edad);
+      public Representante(String nombres, String primer_apellido, String segundo_apellido, String doc_identidad, String correo, String comorbilidad, String riesgo, String profesion, String edad, String puesto_asig) {
+        super(nombres, primer_apellido, segundo_apellido, doc_identidad, correo, comorbilidad, riesgo, profesion, edad);
         this.puesto_asig = puesto_asig;
     }
 }

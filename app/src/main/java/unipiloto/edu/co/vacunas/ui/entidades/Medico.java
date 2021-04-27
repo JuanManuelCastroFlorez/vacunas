@@ -11,7 +11,7 @@ public class Medico extends Usuario {
     }
 
     public Medico(String nombres, String primer_apellido, String segundo_apellido, String doc_identidad, String correo, String profesion, String edad, String entidad) {
-        super(nombres, primer_apellido, segundo_apellido, doc_identidad, correo, profesion, edad);
+        super(nombres, primer_apellido, segundo_apellido, doc_identidad, correo, "","" ,profesion, edad);
         this.entidad = entidad;
     }
 }

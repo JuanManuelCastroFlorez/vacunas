@@ -21,7 +21,7 @@ public class Receptor extends Usuario{
     }
 
     public Receptor(String nombres, String primer_apellido, String segundo_apellido, String doc_identidad, String correo, String profesion, String edad, String localidad, String cantidad_vac) {
-        super(nombres, primer_apellido, segundo_apellido, doc_identidad, correo, profesion, edad);
+        super(nombres, primer_apellido, segundo_apellido, doc_identidad, correo, profesion, edad,localidad,cantidad_vac);
         this.localidad = localidad;
         this.cantidad_vac = cantidad_vac;
     }

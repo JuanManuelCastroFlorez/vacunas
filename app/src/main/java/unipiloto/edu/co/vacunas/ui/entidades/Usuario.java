@@ -6,6 +6,9 @@ public class Usuario {
     protected String Segundo_apellido;
     protected String doc_identidad;
     protected String correo;
+    protected String password;
+    protected String comorbilidad;
+    protected String riesgo;
     protected String profesion;
     protected String edad;
 
@@ -44,6 +47,41 @@ public class Usuario {
         this.correo = correo;
     }
 
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setComorbilidad(String comorbilidad) {
+        this.comorbilidad= comorbilidad;
+    }
+
+    public boolean getComorbilidad(String comorbilidad) {
+        if(comorbilidad.equalsIgnoreCase("si")){
+            return true;
+        }
+        else{
+            return false;
+        }
+
+    }
+
+    public void setRiesgo(String riesgo) {
+        this.riesgo = riesgo;
+    }
+
+    public boolean getRiesgo(String riesgo) {
+        if(riesgo.equalsIgnoreCase("si")){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
     public void setDoc_identidad(String doc_identidad) {
         this.doc_identidad = doc_identidad;
     }
@@ -64,12 +102,14 @@ public class Usuario {
        this.Segundo_apellido = getSegundo_apellido();
     }
 
-    public Usuario(String nombres, String primer_apellido, String segundo_apellido, String doc_identidad, String correo, String profesion, String edad) {
+    public Usuario(String nombres, String primer_apellido, String segundo_apellido, String doc_identidad, String correo,String comorbilidad, String riesgo, String profesion, String edad) {
         this.nombres = nombres;
         this.primer_apellido = primer_apellido;
         this.Segundo_apellido = segundo_apellido;
         this.doc_identidad = doc_identidad;
         this.correo = correo;
+        this.comorbilidad = comorbilidad;
+        this.riesgo = riesgo;
         this.profesion = profesion;
         this.edad = edad;
     }
@@ -82,6 +122,8 @@ public class Usuario {
                 ", Segundo_apellido='" + Segundo_apellido + '\'' +
                 ", doc_identidad='" + doc_identidad + '\'' +
                 ", correo='" + correo + '\'' +
+                ", comorbilidad='" + comorbilidad + '\'' +
+                ", riesgo='" + riesgo + '\'' +
                 ", profesion='" + profesion + '\'' +
                 ", edad='" + edad + '\'' +
                 '}';

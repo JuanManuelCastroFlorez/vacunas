@@ -19,6 +19,18 @@
         <item>C</item>
         <item>D</item>
     </string-array>
+
+    <string-array name="comorbilidad">
+        <item>Comorbilidad</item>
+        <item>Si</item>
+        <item>No</item>
+    </string-array>
+
+    <string-array name="riesgo">
+        <item>Riesgo</item>
+        <item>Si</item>
+        <item>No</item>
+    </string-array>
     <!--<String profesion -->
     <string-array name="profesion">
         <item>Medico</item>
