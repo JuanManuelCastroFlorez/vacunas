@@ -97,18 +97,23 @@
             android:hint="Password"
             android:inputType="textPassword" />
 
-
         <CheckBox
             android:id="@+id/comorbilidad"
             android:layout_width="350dp"
-            android:layout_height="wrap_content"
-            android:text="Tiene comorbilidades" />
+            android:layout_height="50dp"
+            android:ems="10"
+            android:hint="Comorbilidad Si ó No"
+            android:inputType="textPassword" />
 
         <CheckBox
             android:id="@+id/riesgo"
             android:layout_width="350dp"
-            android:layout_height="wrap_content"
-            android:text="Está en situacion de riesgo" />
+            android:layout_height="50dp"
+            android:ems="10"
+            android:hint="Situación de riesgo  Si ó No"
+            android:inputType="textPassword" />
+
+
 
         <TextView
             android:id="@+id/etiquetap"
@@ -138,8 +143,8 @@
             android:layout_marginTop="10dp"
             android:background="#03A9F4"
             android:gravity="center"
-            android:text="Enviar"
             android:onClick="registrar"
+            android:text="Enviar"
             android:textColor="@color/white" />
 
     </LinearLayout>

@@ -1,17 +1,12 @@
 package unipiloto.edu.co.vacunas.ui.activities;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
-
 import java.io.IOException;
-
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.OkHttpClient;
@@ -31,14 +26,10 @@ public  class UsuarioActivity extends Activity {
     private CheckBox comorbilidad;
     private CheckBox riesgo;
     private EditText profesion;
-    private Button enviar;
-
-
-    private String mensajeFinal = "";
 
     public void enviarRegistro(String nombres, String primer_apellido, String segundo_apellido, int edad, String docid, String correo, String comorbilidad, String riesgo, String profesion, String tusuario, String contraseña) {
         OkHttpClient client = new OkHttpClient();
-        String url = "http://192.168.0.103:3000/registro?nombres=" + nombres + "&primer_apellido=" + primer_apellido + "&segundo_apellido=" + segundo_apellido + "&edad=" + edad + "&docid=" + docid + "&correo=" + correo + "&comorbilidad=" + comorbilidad + "&riesgo=" + riesgo + "&profesion=" + profesion +"&tusuario=" + tusuario + "&contraseña=" + contraseña + "";
+        String url = "https://colombiaprocesovacunas.herokuapp.com/registro?nombres=" + nombres + "&primer_apellido=" + primer_apellido + "&segundo_apellido=" + segundo_apellido + "&edad=" + edad + "&docid=" + docid + "&correo=" + correo + "&comorbilidad=" + comorbilidad + "&riesgo=" + riesgo + "&profesion=" + profesion +"&tusuario=" + tusuario + "&contraseña=" + contraseña + "";
         Request request = new Request.Builder().url(url).build();
         client.newCall(request).enqueue(new Callback() {
             @Override
@@ -50,6 +41,7 @@ public  class UsuarioActivity extends Activity {
             public void onResponse(Call call, Response response) throws IOException {
                 if (response.isSuccessful()) {
                     final String myResponse = response.body().string();
+                    System.out.println(myResponse);
                     UsuarioActivity.this.runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
@@ -88,7 +80,6 @@ public  class UsuarioActivity extends Activity {
         riesgo = findViewById(R.id.riesgo);
         profesion = (EditText) findViewById(R.id.profesion);
         password = findViewById(R.id.password);
-        enviar = findViewById(R.id.enviar);
 
     }
 
@@ -107,7 +98,7 @@ public  class UsuarioActivity extends Activity {
         String profesion = this.profesion.getText().toString();
         int edad = Integer.parseInt(this.edad.getText().toString());
         String password = this.password.getText().toString();
-        String medico = "usuario";
+        String usuario = "usuario";
         String tusuario = "4";
         enviarRegistro(nombre, fapellido, sapellido, edad, id, correo, comorbilidad, riesgo, profesion, tusuario, password);
     }
