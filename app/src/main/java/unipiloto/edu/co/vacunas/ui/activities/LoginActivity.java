@@ -55,16 +55,16 @@ public class LoginActivity extends AppCompatActivity {
     public void f_registrar(View view) {
     Intent intent;
         switch (tusuario.getSelectedItem().toString()){
-            case "A":intent = new Intent(this, MedicoActivity.class);
+            case "1":intent = new Intent(this, MedicoActivity.class);
                     startActivity(intent);
                     break;
-            case "B":intent = new Intent(this, ReceptorActivity.class);
+            case "2":intent = new Intent(this, ReceptorActivity.class);
                 startActivity(intent);
                 break;
-            case "C":intent = new Intent(this, RepresentanteActivity.class);
+            case "3":intent = new Intent(this, RepresentanteActivity.class);
                 startActivity(intent);
                 break;
-            case "D":intent = new Intent(this, UsuarioActivity.class);
+            case "4":intent = new Intent(this, UsuarioActivity.class);
                 startActivity(intent);
                 break;
 
@@ -92,7 +92,7 @@ public class LoginActivity extends AppCompatActivity {
                         public void run() {
                           if (myResponse.toString().equals("1")){
                               mensajeFinal = "credenciales correctas";
-                              iniciarDashboard(mensajeFinal);
+                             dash();
                           }
                           else{
                               mostrarErrorCredenciales();
@@ -107,6 +107,28 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+    }
+    public void dash(){
+        Intent intent;
+        switch (tusuario.getSelectedItem().toString()){
+            case "1":intent = new Intent(this, MedicoActivity.class);
+                startActivity(intent);
+                break;
+            case "2":intent = new Intent(this, ReceptorActivity.class);
+                startActivity(intent);
+                break;
+            case "3":intent = new Intent(this, RepresentanteActivity.class);
+                startActivity(intent);
+                break;
+            case "4":intent = new Intent(this, dashusuario.class);
+                intent.putExtra(dashusuario.email,email.getText().toString());
+                startActivity(intent);
+                break;
+
+
+
+
+        }
     }
 
     public void logearse(View view) {
