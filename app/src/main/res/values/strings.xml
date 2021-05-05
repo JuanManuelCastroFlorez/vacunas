@@ -14,7 +14,7 @@
 
     <!--<String registro -->
     <string-array name="usuario">
-        <item></item>
+        <item>A</item>
         <item>B</item>
         <item>C</item>
         <item>D</item>
