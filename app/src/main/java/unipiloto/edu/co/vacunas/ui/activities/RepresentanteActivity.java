@@ -33,7 +33,7 @@ public class RepresentanteActivity extends Activity {
 
     public void enviarRegistro(String nombres, String primer_apellido, String segundo_apellido,int edad, String docid,String correo,String profesion,String puesto_asignacion,String localidad, int cant_vacunas,String entidad,String tusuario, String contraseña ){
         OkHttpClient client = new OkHttpClient();
-        String url = "https://colombiaprocesovacunas.herokuapp.com/registro/?nombres="+nombres+"&primer_apellido="+primer_apellido+"&segundo_apellido="+segundo_apellido+"&edad="+edad+"&docid="+docid+"&correo="+correo+"&profesion="+profesion+"&puesto_asignacion="+puesto_asignacion+"&localidad="+localidad+"&cant_vacunas&entidad="+cant_vacunas+"&tusuario="+tusuario+"&contraseña="+contraseña+"";
+        String url = "https://colombiaprocesovacunas.herokuapp.com/registro?nombres="+nombres+"&primer_apellido="+primer_apellido+"&segundo_apellido="+segundo_apellido+"&edad="+edad+"&docid="+docid+"&correo="+correo+"&profesion="+profesion+"&puesto_asignacion="+puesto_asignacion+"&localidad="+localidad+"&cant_vacunas&entidad="+cant_vacunas+"&tusuario="+tusuario+"&contrasena="+contraseña+"";
         Request request = new Request.Builder().url(url).build();
         client.newCall(request).enqueue(new Callback() {
             @Override
