@@ -50,7 +50,7 @@ public class dashusuario extends Activity {
     }
     public void get_usuario(String correo){
         OkHttpClient client = new OkHttpClient();
-        String url = "http://192.168.0.103:3000/getusuario?correo="+correo;
+        String url = "https://colombiaprocesovacunas.herokuapp.com/getusuario?correo="+correo;
         Request request = new Request.Builder().url(url).build();
         client.newCall(request).enqueue(new Callback() {
             @Override

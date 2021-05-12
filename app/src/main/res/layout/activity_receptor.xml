@@ -102,7 +102,7 @@
             android:layout_height="50dp"
             android:ems="10"
             android:hint="localidad"
-            android:inputType="textPassword" />
+            android:inputType="text" />
 
         <EditText
             android:id="@+id/canti_vacunas"
@@ -110,7 +110,7 @@
             android:layout_height="50dp"
             android:ems="10"
             android:hint="cantidad de vacunas"
-            android:inputType="textPassword" />
+            android:inputType="text" />
 
         <TextView
             android:id="@+id/etiquetap"

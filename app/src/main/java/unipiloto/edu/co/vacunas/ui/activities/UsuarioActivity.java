@@ -38,7 +38,7 @@ public  class UsuarioActivity extends Activity {
 
     public void enviarRegistro(String nombres, String primer_apellido, String segundo_apellido, int edad, String docid, String correo, String comorbilidad, String riesgo, String profesion, String tusuario, String contraseña) {
         OkHttpClient client = new OkHttpClient();
-        String url = "http://192.168.0.103:3000/registro?nombres=" + nombres + "&primer_apellido=" + primer_apellido + "&segundo_apellido=" + segundo_apellido + "&edad=" + edad + "&docid=" + docid + "&correo=" + correo + "&comorbilidad=" + comorbilidad + "&riesgo=" + riesgo + "&profesion=" + profesion +"&tusuario=" + tusuario + "&contraseña=" + contraseña + "";
+        String url = "https://colombiaprocesovacunas.herokuapp.com/registro?nombres=" + nombres + "&primer_apellido=" + primer_apellido + "&segundo_apellido=" + segundo_apellido + "&edad=" + edad + "&docid=" + docid + "&correo=" + correo + "&comorbilidad=" + comorbilidad + "&riesgo=" + riesgo + "&profesion=" + profesion +"&tusuario=" + tusuario + "&contrasena=" + contraseña + "";
         Request request = new Request.Builder().url(url).build();
         client.newCall(request).enqueue(new Callback() {
             @Override
