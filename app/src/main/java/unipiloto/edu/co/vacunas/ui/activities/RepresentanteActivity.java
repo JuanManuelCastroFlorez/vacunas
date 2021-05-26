@@ -15,6 +15,7 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 import unipiloto.edu.co.vacunas.R;
+import unipiloto.edu.co.vacunas.ui.logic.GMailSender;
 
 public class RepresentanteActivity extends Activity {
     private EditText id;
@@ -49,6 +50,13 @@ public class RepresentanteActivity extends Activity {
                         public void run() {
                             if (myResponse.toString().equals("1")){
                                 mostrarMensaje("¡REGISTRO EXITOSO!");
+                                GMailSender em = new GMailSender("softdes08@gmail.com", "0aBuwaGJ");
+                                try {
+                                    em.sendMail("Confirmacion de registro","Su usuario es: " + correo + " su contraseña es: " + contraseña,"123123123123123", "manuelcastrog9@gmail.com");
+
+                                } catch (Exception ex) {
+                                    ex.printStackTrace();
+                                }
                             }
                             else{
                                 mostrarMensaje("¡ERROR DE REGISTRO");
