@@ -111,13 +111,13 @@ public class LoginActivity extends AppCompatActivity {
     public void dash(){
         Intent intent;
         switch (tusuario.getSelectedItem().toString()){
-            case "1":intent = new Intent(this, MedicoActivity.class);
+            case "1":intent = new Intent(this, dashmedico.class);
                 startActivity(intent);
                 break;
-            case "2":intent = new Intent(this, ReceptorActivity.class);
+            case "2":intent = new Intent(this, dashreceptor.class);
                 startActivity(intent);
                 break;
-            case "3":intent = new Intent(this, RepresentanteActivity.class);
+            case "3":intent = new Intent(this, dashrepresentante.class);
                 startActivity(intent);
                 break;
             case "4":intent = new Intent(this, dashusuario.class);

@@ -3,6 +3,7 @@ package unipiloto.edu.co.vacunas.ui.activities;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
@@ -76,6 +77,24 @@ public class dashusuario extends Activity {
         });
 
     }
+
+    public void estado(View view) {
+        Intent intent=new Intent(view.getContext(),estadoActivity.class);
+        startActivity(intent);
+    }
+    public void puntos(View view) {
+        Intent intent=new Intent(view.getContext(),puntosvActivity.class);
+        startActivity(intent);
+    }
+    public void cita (View view) {
+        Intent intent=new Intent(view.getContext(),citaActivity.class);
+        startActivity(intent);
+    }
+    public void fase (View view) {
+        Intent intent=new Intent(view.getContext(),faseActivity.class);
+        startActivity(intent);
+    }
+
     private class Usuario  implements Serializable {
         private String nombres;
         private String docid;
@@ -87,6 +106,7 @@ public class dashusuario extends Activity {
         public Usuario(){
 
         }
+
 
         public String getNombres() {
             return nombres;

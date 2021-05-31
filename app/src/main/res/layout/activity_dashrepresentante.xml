@@ -47,8 +47,9 @@
                 android:layout_marginTop="100dp"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
-                android:text="Solicitudes de puntos de atención"
-                android:textStyle="bold"/>
+                android:text="Pacientes sin vacunar (por fase)"
+                android:textStyle="bold"
+                android:onClick="psvf"/>
 
             <Button
                 android:id="@+id/button2"
@@ -58,8 +59,9 @@
                 android:layout_marginTop="100dp"
                 android:layout_marginRight="30dp"
                 android:layout_weight="1"
-                android:text="Cosulta de vacunas pendientes"
-                android:textStyle="bold"/>
+                android:text="Pacientes pendientes por segunda dosis"
+                android:textStyle="bold"
+                android:onClick="ppsd"/>
 
         </LinearLayout>
 
@@ -75,8 +77,9 @@
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
-                android:text="Solicitudes de puntos de atención"
-                android:textStyle="bold"/>
+                android:text="pacientes vacunados"
+                android:textStyle="bold"
+                android:onClick="pv"/>
 
             <Button
                 android:id="@+id/button4"
@@ -85,31 +88,18 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="30dp"
                 android:layout_weight="1"
-                android:text="Cosulta de vacunas pendientes"
-                android:textStyle="bold"/>
+                android:text="Asignación de pacientes"
+                android:textStyle="bold"
+                android:onClick="ap"/>
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="160dp"
-            android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/button5"
-                android:layout_width="wrap_content"
-                android:layout_height="150dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:layout_weight="1"
-                android:text="Pacientes vacunados"
-                android:textStyle="bold"/>
-
-        </LinearLayout>
         <TextView
             android:id="@+id/propiedad"
             android:layout_width="259dp"
             android:layout_height="66dp"
+            android:layout_marginTop="100dp"
             android:layout_marginBottom="16dp"
             android:layout_gravity="center"
             android:gravity="center"

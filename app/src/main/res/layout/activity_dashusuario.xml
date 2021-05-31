@@ -49,7 +49,8 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:text="puntos de vacunacion"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:onClick="puntos"/>
 
             <Button
                 android:id="@+id/button2"
@@ -60,7 +61,8 @@
                 android:layout_marginRight="30dp"
                 android:layout_weight="1"
                 android:text="Estado de solicitud"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:onClick="estado"/>
 
         </LinearLayout>
 
@@ -77,7 +79,8 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:text="Agendar cita"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:onClick="cita"/>
 
             <Button
                 android:id="@+id/button4"
@@ -87,7 +90,8 @@
                 android:layout_marginRight="30dp"
                 android:layout_weight="1"
                 android:text="Consultar fase"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:onClick="fase"/>
 
         </LinearLayout>
         <TextView

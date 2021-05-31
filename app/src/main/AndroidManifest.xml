@@ -18,9 +18,28 @@
         <activity android:name=".ui.activities.MedicoActivity"></activity>
         <activity android:name=".ui.activities.RepresentanteActivity"></activity>
         <activity android:name=".ui.activities.ReceptorActivity"></activity>
+        //usuario
+        <activity android:name=".ui.activities.estadoActivity"></activity>
+        <activity android:name=".ui.activities.puntosvActivity"></activity>
+        <activity android:name=".ui.activities.citaActivity"></activity>
+        <activity android:name=".ui.activities.faseActivity"></activity>
+        //representante
+        <activity android:name=".ui.activities.pacientesinvfaseActivity"></activity>
+        <activity android:name=".ui.activities.pacientependientessegundaActivity"></activity>
+        <activity android:name=".ui.activities.pacientevacunadosActivity"></activity>
+        <activity android:name=".ui.activities.asignacionpacientesActivity"></activity>
+        //receptor
+        <activity android:name=".ui.activities.distribucionActivity"></activity>
+        <activity android:name=".ui.activities.remitirActivity"></activity>
+        <activity android:name=".ui.activities.inventarionacActivity"></activity>
+        <activity android:name=".ui.activities.asigvacActivity"></activity>
+        //medico
+        <activity android:name=".ui.activities.asigdiaActivity"></activity>
+        <activity android:name=".ui.activities.pvtActivity"></activity>
+        <activity android:name=".ui.activities.rutavacActivity"></activity>
         <activity android:name=".ui.activities.UsuarioActivity" />
         <activity
-            android:name=".ui.activities.UbicacionGPS"
+            android:name=".ui.activities.LoginActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,5 +47,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.activities.dashusuario" />
+        <activity android:name=".ui.activities.dashrepresentante" />
+        <activity android:name=".ui.activities.dashreceptor" />
+        <activity android:name=".ui.activities.dashmedico" />
     </application>
 </manifest>

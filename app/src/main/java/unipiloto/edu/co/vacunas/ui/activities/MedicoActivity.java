@@ -56,7 +56,7 @@ public class MedicoActivity extends Activity {
                                 GMailSender em = new GMailSender("softdes08@gmail.com", "0aBuwaGJ");
                                 try {
                                     em.sendMail("Confirmacion de registro","Su usuario es: " + correo + " su contraseña es: " + contraseña,"123123123123123", "manuelcastrog9@gmail.com");
-
+                                    return;
                                 } catch (Exception ex) {
                                     ex.printStackTrace();
                                 }

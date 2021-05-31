@@ -48,8 +48,9 @@
                 android:layout_marginTop="100dp"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
-                android:text="Solicitudes de puntos de atención"
-                android:textStyle="bold"/>
+                android:text="Solicitar ruta vacunacion"
+                android:textStyle="bold"
+                android:onClick="srv"/>
 
             <Button
                 android:id="@+id/button2"
@@ -59,8 +60,9 @@
                 android:layout_marginTop="100dp"
                 android:layout_marginRight="30dp"
                 android:layout_weight="1"
-                android:text="Cosulta de vacunas pendientes"
-                android:textStyle="bold"/>
+                android:text="Asignacion diaria"
+                android:textStyle="bold"
+                android:onClick="adp"/>
 
         </LinearLayout>
 
@@ -77,7 +79,8 @@
                 android:layout_marginRight="30dp"
                 android:layout_weight="1"
                 android:text="Pacientes vacunados"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:onClick="pvt"/>
 
         </LinearLayout>
         <TextView
