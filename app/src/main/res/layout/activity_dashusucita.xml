@@ -140,7 +140,8 @@
                 android:layout_marginTop="20dp"
                 android:layout_weight="1"
                 android:text="Agendar cita"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:onClick="asignar"/>
 
         </LinearLayout>
         <TextView

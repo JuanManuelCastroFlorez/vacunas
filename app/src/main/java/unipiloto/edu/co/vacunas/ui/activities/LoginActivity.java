@@ -112,22 +112,21 @@ public class LoginActivity extends AppCompatActivity {
         Intent intent;
         switch (tusuario.getSelectedItem().toString()){
             case "1":intent = new Intent(this, dashmedico.class);
+                intent.putExtra(dashusuario.email,email.getText().toString());
                 startActivity(intent);
                 break;
             case "2":intent = new Intent(this, dashreceptor.class);
+                intent.putExtra(dashusuario.email,email.getText().toString());
                 startActivity(intent);
                 break;
             case "3":intent = new Intent(this, dashrepresentante.class);
+                intent.putExtra(dashusuario.email,email.getText().toString());
                 startActivity(intent);
                 break;
             case "4":intent = new Intent(this, dashusuario.class);
                 intent.putExtra(dashusuario.email,email.getText().toString());
                 startActivity(intent);
                 break;
-
-
-
-
         }
     }
 

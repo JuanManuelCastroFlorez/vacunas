@@ -35,17 +35,15 @@ public class dashmedico extends Activity {
         get_usuario(correo);
         nombre=findViewById(R.id.textView4);
         docid=findViewById(R.id.textView5);
-
-
     }
+
     public void enviarusuario(String us){
         Gson usu=new Gson();
-
-
         usuario = usu.fromJson(us, Usuario.class);
         nombre.setText(usuario.getNombres());
         docid.setText(usuario.getDocid());
     }
+
     public void get_usuario(String correo){
         OkHttpClient client = new OkHttpClient();
         String url = "https://colombiaprocesovacunas.herokuapp.com/getusuario?correo="+correo;
@@ -62,8 +60,7 @@ public class dashmedico extends Activity {
                     dashmedico.this.runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            System.out.println("entra");
-                            //enviarusuario(myResponse.toString());
+                            enviarusuario(myResponse.toString());
                         }
                     });
                 }
@@ -78,6 +75,8 @@ public class dashmedico extends Activity {
 
     public void srv(View view) {
         Intent intent=new Intent(view.getContext(),rutavacActivity.class);
+        intent.putExtra("usuario",usuario.getNombres());
+        intent.putExtra("id",usuario.getDocid());
         startActivity(intent);
     }
     public void adp(View view) {

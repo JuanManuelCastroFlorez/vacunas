@@ -36,7 +36,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="440dp"
+            android:layout_height="550dp"
             android:layout_marginTop="20dp"
             android:orientation="vertical">
 
@@ -52,6 +52,33 @@
                 android:textColor="@color/white"
                 android:textSize="18sp" />
 
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="440dp">
+
+                <TableLayout
+                    android:id="@+id/tabla"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </TableLayout>
+            </ScrollView>
+
 
         </LinearLayout>
 
@@ -59,15 +86,15 @@
             android:id="@+id/propiedad"
             android:layout_width="259dp"
             android:layout_height="66dp"
-            android:layout_marginBottom="16dp"
             android:layout_gravity="center"
+            android:layout_marginBottom="16dp"
             android:gravity="center"
-            android:layout_marginTop="90dp"
             android:text="By SoftDes"
             android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

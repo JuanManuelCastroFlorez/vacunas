@@ -22,10 +22,13 @@ import okhttp3.Response;
 import unipiloto.edu.co.vacunas.R;
 
 public class dashusuario extends Activity {
+
     public static String email="email";
+    private String vcorreo;
     private TextView nombre;
     private TextView docid;
     private Usuario usuario;
+
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashusuario);
@@ -34,21 +37,19 @@ public class dashusuario extends Activity {
 
     private void intiComponents() {
         Intent intent=getIntent();
-        String correo=intent.getStringExtra(email);
-        get_usuario(correo);
+        vcorreo =intent.getStringExtra(email);
+        get_usuario(vcorreo);
         nombre=findViewById(R.id.textView4);
         docid=findViewById(R.id.textView5);
-
-
     }
+
     public void enviarusuario(String us){
         Gson usu=new Gson();
-
-
         usuario = usu.fromJson(us, Usuario.class);
         nombre.setText(usuario.getNombres());
         docid.setText(usuario.getDocid());
     }
+
     public void get_usuario(String correo){
         OkHttpClient client = new OkHttpClient();
         String url = "https://colombiaprocesovacunas.herokuapp.com/getusuario?correo="+correo;
@@ -75,27 +76,33 @@ public class dashusuario extends Activity {
                 super.finalize();
             }
         });
-
     }
 
     public void estado(View view) {
         Intent intent=new Intent(view.getContext(),estadoActivity.class);
+        intent.putExtra(citaActivity.email, vcorreo);
         startActivity(intent);
     }
+
     public void puntos(View view) {
         Intent intent=new Intent(view.getContext(),puntosvActivity.class);
         startActivity(intent);
     }
+
     public void cita (View view) {
         Intent intent=new Intent(view.getContext(),citaActivity.class);
+        intent.putExtra(citaActivity.email, vcorreo);
         startActivity(intent);
     }
+
     public void fase (View view) {
         Intent intent=new Intent(view.getContext(),faseActivity.class);
+        intent.putExtra(citaActivity.email, vcorreo);
         startActivity(intent);
     }
 
     private class Usuario  implements Serializable {
+
         private String nombres;
         private String docid;
 
@@ -103,10 +110,10 @@ public class dashusuario extends Activity {
             this.nombres = nombres;
             this.docid = docid;
         }
+
         public Usuario(){
 
         }
-
 
         public String getNombres() {
             return nombres;
