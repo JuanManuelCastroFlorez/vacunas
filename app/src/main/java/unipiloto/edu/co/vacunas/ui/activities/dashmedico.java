@@ -84,7 +84,7 @@ public class dashmedico extends Activity {
         startActivity(intent);
     }
     public void pvt(View view) {
-        Intent intent=new Intent(view.getContext(),pvtActivity.class);
+        Intent intent=new Intent(view.getContext(),pacientevacunadosActivity.class);
         startActivity(intent);
     }
 
