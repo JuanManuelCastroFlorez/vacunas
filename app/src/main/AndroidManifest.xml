@@ -39,7 +39,7 @@
         <activity android:name=".ui.activities.rutavacActivity"></activity>
         <activity android:name=".ui.activities.UsuarioActivity" />
         <activity
-            android:name=".ui.activities.LoginActivity"
+            android:name=".ui.activities.UbicacionGPS"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

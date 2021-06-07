@@ -57,7 +57,7 @@ public class UbicacionGPS extends AppCompatActivity {
                     location_view.setText("When permission denied");
                     ActivityCompat.requestPermissions(UbicacionGPS.this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 44);
                 }
-                System.out.println(ActivityCompat.checkSelfPermission(UbicacionGPS.this, Manifest.permission.ACCESS_FINE_LOCATION) + " " + PackageManager.PERMISSION_GRANTED);
+
             }
         });
     }
@@ -69,7 +69,7 @@ public class UbicacionGPS extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<Location> task) {
                     Location location = task.getResult();
-                    System.out.println("location = " + location);
+
                     if(location != null){
                         Geocoder geocoder = new Geocoder(UbicacionGPS.this, Locale.getDefault());
                         try{
