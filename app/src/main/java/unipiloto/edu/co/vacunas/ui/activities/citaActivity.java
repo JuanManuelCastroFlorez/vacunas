@@ -15,6 +15,7 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 import unipiloto.edu.co.vacunas.R;
+import unipiloto.edu.co.vacunas.ui.services.DelayedMessageService;
 
 public class citaActivity extends Activity {
 
@@ -67,6 +68,9 @@ public class citaActivity extends Activity {
 
     public void alerta(){
         Toast.makeText(this, "Asignación realizada",Toast.LENGTH_SHORT).show();
+        Intent intent= new Intent(this, DelayedMessageService.class);
+        intent.putExtra(DelayedMessageService.EXTRA_MESSAGE,getResources().getString(R.string.response));
+        startService(intent);
     }
 
     public void asignar(View view) {

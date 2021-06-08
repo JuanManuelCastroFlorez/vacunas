@@ -7,7 +7,7 @@
     <string name="action_sign_in_short">Sign in</string>
     <string name="welcome">"Welcome !"</string>
     <string name="invalid_username">Not a valid username</string>
-    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="invalid_password">Password must be > 5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <string name="etiu">"Tipo de usuarios"</string>
     <string name="etip">"Profesión"</string>
@@ -28,4 +28,10 @@
         <item>Estudiante</item>
         <item>Otro</item>
     </string-array>
+
+    <!-- services -->
+    <string name="response">Su cita a sido asignada satisfactoriamente</string>
+    <string name="question">Vacunas</string>
+    <string name="channel_name">channel</string>
+    <string name="channel_desc">descp</string>
 </resources>

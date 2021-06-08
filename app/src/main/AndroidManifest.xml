@@ -1,48 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="unipiloto.edu.co.vacunas">
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:usesCleartextTraffic="true"
-        android:theme="@style/Theme.Vacunas">
-        <activity android:name=".ui.activities.DashboardActivity"></activity>
-        <activity android:name=".ui.activities.MedicoActivity"></activity>
-        <activity android:name=".ui.activities.RepresentanteActivity"></activity>
-        <activity android:name=".ui.activities.ReceptorActivity"></activity>
-        //usuario
-        <activity android:name=".ui.activities.estadoActivity"></activity>
-        <activity android:name=".ui.activities.puntosvActivity"></activity>
-        <activity android:name=".ui.activities.citaActivity"></activity>
-        <activity android:name=".ui.activities.faseActivity"></activity>
-        //representante
-        <activity android:name=".ui.activities.pacientesinvfaseActivity"></activity>
-        <activity android:name=".ui.activities.pacientependientessegundaActivity"></activity>
-        <activity android:name=".ui.activities.pacientevacunadosActivity"></activity>
-        <activity android:name=".ui.activities.asignacionpacientesActivity"></activity>
-        //receptor
-        <activity android:name=".ui.activities.distribucionActivity"></activity>
-        <activity android:name=".ui.activities.remitirActivity"></activity>
-        <activity android:name=".ui.activities.inventarionacActivity"></activity>
-        <activity android:name=".ui.activities.asigvacActivity"></activity>
-        //medico
-        <activity android:name=".ui.activities.asigdiaActivity"></activity>
-        <activity android:name=".ui.activities.pvtActivity"></activity>
-        <activity android:name=".ui.activities.rutavacActivity"></activity>
+        android:theme="@style/Theme.Vacunas"
+        android:usesCleartextTraffic="true">
+        <service
+            android:name=".ui.services.DelayedMessageService"
+            android:exported="false"></service>
+
+        <activity android:name=".ui.activities.DashboardActivity" />
+        <activity android:name=".ui.activities.MedicoActivity" />
+        <activity android:name=".ui.activities.RepresentanteActivity" />
+        <activity android:name=".ui.activities.ReceptorActivity" />
+        <activity android:name=".ui.activities.estadoActivity" />
+        <activity android:name=".ui.activities.puntosvActivity" />
+        <activity android:name=".ui.activities.citaActivity" />
+        <activity android:name=".ui.activities.faseActivity" />
+        <activity android:name=".ui.activities.pacientesinvfaseActivity" />
+        <activity android:name=".ui.activities.pacientependientessegundaActivity" />
+        <activity android:name=".ui.activities.pacientevacunadosActivity" />
+        <activity android:name=".ui.activities.asignacionpacientesActivity" />
+        <activity android:name=".ui.activities.distribucionActivity" />
+        <activity android:name=".ui.activities.remitirActivity" />
+        <activity android:name=".ui.activities.inventarionacActivity" />
+        <activity android:name=".ui.activities.asigvacActivity" />
+        <activity android:name=".ui.activities.asigdiaActivity" />
+        <activity android:name=".ui.activities.pvtActivity" />
+        <activity android:name=".ui.activities.rutavacActivity" />
         <activity android:name=".ui.activities.UsuarioActivity" />
         <activity
             android:name=".ui.activities.UbicacionGPS"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -51,4 +54,5 @@
         <activity android:name=".ui.activities.dashreceptor" />
         <activity android:name=".ui.activities.dashmedico" />
     </application>
+
 </manifest>

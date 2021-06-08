@@ -2,7 +2,9 @@ package unipiloto.edu.co.vacunas.ui.activities;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -70,13 +72,15 @@ public class dashmedico extends Activity {
                 super.finalize();
             }
         });
-
     }
 
     public void srv(View view) {
-        Intent intent=new Intent(view.getContext(),rutavacActivity.class);
-        intent.putExtra("usuario",usuario.getNombres());
-        intent.putExtra("id",usuario.getDocid());
+        Uri.Builder builder= new Uri.Builder();
+        builder.scheme("https").authority("www.google.com").appendPath("maps").appendPath("dir").appendPath("").appendQueryParameter("api", "1").appendQueryParameter("destination", 4.632339710 + "," + -74.065350);
+        String url= builder.build().toString();
+        Log.d("Directions", url);
+        Intent intent= new Intent(Intent.ACTION_VIEW);
+        intent.setData(Uri.parse(url));
         startActivity(intent);
     }
     public void adp(View view) {
@@ -100,7 +104,6 @@ public class dashmedico extends Activity {
         public Usuario(){
 
         }
-
 
         public String getNombres() {
             return nombres;
